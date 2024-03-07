@@ -1,0 +1,98 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.counter{
+    width: 75%;
+    margin:2rem auto;
+    padding: 1rem;
+    background-color: rgb(0, 255, 0);
+    font-style: italic;
+    border-radius: 1rem;
+}
+.counter *{
+    margin-bottom: 1rem;
+}
+.headerText,.text{
+    font-weight: bold;
+    text-align: center;
+  /* font-size: 20px; */
+}
+
+.userInput{
+display: block;
+width: 100%;
+outline:none;
+padding: 0px 0.5rem;
+}
+.userInput,.addItembtn,.clearItemsBtn,.complete,.deleteItem{
+    border-radius: 0.7rem;
+    border: none;
+    font-style: italic;
+    outline: 2px solid rgb(255, 196, 0);
+    height: 30px;
+    transition: all 0.1s;
+}
+.addItembtn,.clearItemsBtn{
+    cursor: pointer;
+    width: 80px;
+    margin:0.5rem;
+    margin-bottom: 1rem;
+}
+.addItembtn:hover,.clearItemsBtn:hover,.userInput:focus,.complete:hover,.deleteItem:hover{
+border: 3px solid rgb(255, 145, 0);
+}
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    border:3px solid rgb(6, 194, 22);
+    border-radius: 1rem;
+    padding:0.5rem;
+}
+.todoValue{
+    font-weight: bold;
+    font-size: 18px;
+    width: 40%;
+}
+.btns,.complete,.deleteItem,.todoValue{
+    margin: 0px;
+}
+.complete,.deleteItem{
+    cursor: pointer;
+    margin-left: 0.5rem;
+    width: 80px;
+    height: 30px;
+
+}
+.finished{
+    border: none;
+    margin: 0px;
+    cursor: pointer;
+    width: 80px;
+    border-radius: 0.7rem;
+    height: 30px;
+    transition: all 0.1s;
+    outline: 2px solid rgb(51, 0, 255);
+}
+.finished:hover{
+    border: 3px solid rgb(0, 9, 182);
+}
+
+
+@media only screen and (max-width: 520px) {
+.todoValue{
+    width: 70%;
+}
+.items{
+    flex-wrap: wrap;
+}
+.complete,.deleteItem,.finished{
+    width: 80px;
+    display: block;
+    margin:0.5rem auto;
+}
+}
